@@ -1,0 +1,2 @@
+export function normalizeKenyanPhone(value:string){const digits=value.replace(/\D/g,"");if(/^254(?:7|1)\d{8}$/.test(digits))return digits;if(/^0(?:7|1)\d{8}$/.test(digits))return `254${digits.slice(1)}`;throw new Error("Invalid Kenyan phone number")}
+export function createWhatsAppUrl(phone:string,message:string){return `https://wa.me/${normalizeKenyanPhone(phone)}?text=${encodeURIComponent(message)}`}

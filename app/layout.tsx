@@ -1,0 +1,3 @@
+import type {Metadata} from "next";import "./globals.css";
+export const metadata:Metadata={title:"Cake City Kenya | Order Directly on WhatsApp",description:"Connect with your nearest Cake City branch and place your cake order directly on WhatsApp.",metadataBase:new URL("https://cakecity.co.ke"),openGraph:{title:"Cake City Kenya | Your cake. Your branch. Your moment.",description:"Choose your nearest Cake City branch and start your order on WhatsApp.",type:"website",url:"https://cakecity.co.ke"}};
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}

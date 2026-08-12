@@ -1,0 +1,1 @@
+"use client";import {MessageCircle} from "lucide-react";export function MobileStickyCTA(){return <div className="mobileSticky"><a href="#branches"><MessageCircle/>Choose your branch on WhatsApp</a></div>}

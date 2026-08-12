@@ -1,0 +1,1 @@
+import {ArrowUpRight} from "lucide-react";export function Footer(){return <footer><div className="footerMark"><span>C</span><div><b>CAKE CITY</b><p>Celebrating life's sweet moments.</p></div></div><div><p>© Cake City Kenya</p><a href="https://cakecity.co.ke/" target="_blank" rel="noopener noreferrer">Visit cakecity.co.ke <ArrowUpRight/></a></div></footer>}
