@@ -19,7 +19,7 @@ export function Hero() {
           <h1>Your cake.<br />Your branch.<br /><em>Your moment.</em></h1>
           <p>Choose your nearest Cake City branch, start a WhatsApp chat, and plan something delicious with the team who will make it.</p>
           <div className="heroActions">
-            <a className="heroCta" href="#branches"><span className="heroCtaLogo"><Image src="/images/cake-city-web-logo.png" alt="" width={803} height={381} /></span><span>Find my branch</span><ArrowDown /></a>
+            <a className="heroCta" href="/branches"><span className="heroCtaLogo"><Image src="/images/cake-city-web-logo.png" alt="" width={803} height={381} /></span><span>Find my branch</span><ArrowDown /></a>
             <span className="heroWhatsApp"><MessageCircle /> Orders handled on WhatsApp</span>
           </div>
           <div className="heroProof" aria-label="Ordering benefits">
