@@ -1,1 +1,10 @@
-import {CakeSlice,MapPinned,MessageCircleMore,Sparkles} from "lucide-react";const items=[{icon:CakeSlice,title:"Cakes for every occasion",text:"From birthdays to weddings and everyday celebrations."},{icon:MapPinned,title:"13 campaign branches",text:"Choose the Cake City location that works for you."},{icon:MessageCircleMore,title:"Direct WhatsApp ordering",text:"Start a conversation with the branch you select."},{icon:Sparkles,title:"Custom cake options",text:"Share your celebration idea directly with the team."}];export function TrustSection(){return <section className="trust"><span>MADE FOR LIFE'S SWEETEST MOMENTS</span><h2>Your nearest Cake City is<br/>just a message away.</h2><div>{items.map(({icon:Icon,title,text})=><article key={title}><Icon/><h3>{title}</h3><p>{text}</p></article>)}</div></section>}
+const items = [
+  { title: "Cakes for every occasion", text: "From birthdays to weddings and everyday celebrations." },
+  { title: "13 Cake City branches", text: "Choose the Cake City location that works for you." },
+  { title: "Direct WhatsApp ordering", text: "Start a conversation with the branch you select." },
+  { title: "Custom cake options", text: "Share your celebration idea directly with the team." },
+];
+
+export function TrustSection() {
+  return <section className="trust"><div className="trustInner"><span>MADE FOR LIFE&apos;S SWEETEST MOMENTS</span><h2>Your nearest Cake City is<br />just a message away.</h2><div className="trustGrid">{items.map(({ title, text }) => <article key={title}><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>;
+}

@@ -1,4 +1,40 @@
-"use client";
-import {motion} from "framer-motion";import {ArrowDown,ExternalLink} from "lucide-react";
-const ease=[.22,1,.36,1] as const;const reveal={hidden:{opacity:0,y:22},visible:{opacity:1,y:0}};
-export function Hero(){return <section className="hero"><div className="orb one"/><div className="orb two"/><header><a className="wordmark" href="#top" aria-label="Cake City home"><span>C</span><b>CAKE CITY</b></a><a href="https://cakecity.co.ke/" target="_blank" rel="noopener noreferrer">cakecity.co.ke <ExternalLink/></a></header><div className="heroGrid"><div className="heroCopy"><motion.span initial="hidden" animate="visible" variants={reveal} transition={{delay:.15,duration:.7,ease}} className="overline">DIRECT BRANCH ORDERING</motion.span><motion.h1 initial="hidden" animate="visible" variants={reveal} transition={{delay:.3,duration:.75,ease}}>Your cake.<br/>Your branch.<br/><em>Your moment.</em></motion.h1><motion.p initial="hidden" animate="visible" variants={reveal} transition={{delay:.45,duration:.7,ease}}>Connect directly with your nearest Cake City branch on WhatsApp and place your order with ease.</motion.p><motion.div initial="hidden" animate="visible" variants={reveal} transition={{delay:.6,duration:.7,ease}}><a className="heroCta" href="#branches">Choose your branch <ArrowDown/></a><small>13 branches <i/> Direct WhatsApp ordering</small></motion.div></div><motion.div className="cakeStage" initial={{opacity:0,scale:.96}} animate={{opacity:1,scale:1}} transition={{delay:.7,duration:1,ease}} aria-label="Elegant celebration cake illustration"><div className="glassNote"><span>Made for</span><b>sweet moments</b></div><div className="cake"><div className="berry b1"/><div className="berry b2"/><div className="berry b3"/><div className="cream top"/><div className="layer upper"><i/><i/><i/><i/><i/></div><div className="cream middle"/><div className="layer lower"><i/><i/><i/><i/><i/><i/></div><div className="plate"/></div><div className="flavour">Signature cakes<br/><b>crafted for celebrations</b></div></motion.div></div></section>}
+import Image from "next/image";
+import { ArrowDown, Check, ExternalLink, MessageCircle } from "lucide-react";
+
+export function Hero() {
+  return (
+    <section className="hero" id="top">
+      <header>
+        <a className="wordmark" href="#top" aria-label="Cake City home">
+          <Image src="/images/cake-city-web-logo.png" alt="Cake City — The Cake Experts" width={803} height={381} priority />
+        </a>
+        <a className="websiteLink" href="https://cakecity.co.ke/" target="_blank" rel="noopener noreferrer">
+          Visit our website <ExternalLink />
+        </a>
+      </header>
+
+      <div className="heroGrid">
+        <div className="heroCopy">
+          <span className="overline">DIRECT BRANCH ORDERING</span>
+          <h1>Your cake.<br />Your branch.<br /><em>Your moment.</em></h1>
+          <p>Choose your nearest Cake City branch, start a WhatsApp chat, and plan something delicious with the team who will make it.</p>
+          <div className="heroActions">
+            <a className="heroCta" href="#branches"><span className="heroCtaLogo"><Image src="/images/cake-city-web-logo.png" alt="" width={803} height={381} /></span><span>Find my branch</span><ArrowDown /></a>
+            <span className="heroWhatsApp"><MessageCircle /> Orders handled on WhatsApp</span>
+          </div>
+          <div className="heroProof" aria-label="Ordering benefits">
+            <span><Check /> 13 convenient branches</span>
+            <span><Check /> Direct local assistance</span>
+            <span><Check /> Custom cake enquiries</span>
+          </div>
+        </div>
+
+        <div className="cakeStage promoStage">
+          <div className="promoImageWrap">
+            <Image src="/images/august-mouthgasms-2026.jpeg" alt="Cake City August Mouthgasms offer — 10% off whole cakes from 1st to 31st August 2026" width={2560} height={2560} priority />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
