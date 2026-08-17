@@ -1,1 +1,1 @@
-"use client";import {MessageCircle} from "lucide-react";export function MobileStickyCTA(){return <div className="mobileSticky"><a href="/branches"><MessageCircle/>Choose your branch on WhatsApp</a></div>}
+"use client";import {MessageCircle} from "lucide-react";import {trackEvent} from "@/lib/analytics";export function MobileStickyCTA(){return <div className="mobileSticky"><a href="/branches" onClick={()=>trackEvent("branch_cta_click",{placement:"mobile_sticky"})}><MessageCircle/>Choose your branch on WhatsApp</a></div>}
